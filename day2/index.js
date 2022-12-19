@@ -48,3 +48,47 @@ splitInput.forEach((game) => {
 });
 
 console.log("Part 1 Solution: " + score);
+
+const calcWinLoseDraw = (char) => {
+  switch (char) {
+    case "X":
+      return "lose";
+    case "Y":
+      return "draw";
+    case "Z":
+      return "win";
+  }
+};
+
+const parseSecondGame = (opponent, winLoseDraw) => {
+  if (winLoseDraw === "draw") return getValue(opponent) + 3;
+  else if (opponent === "rock") {
+    if (winLoseDraw === "win") {
+      return getValue("paper") + 6;
+    } else {
+      return getValue("scissors");
+    }
+  } else if (opponent === "paper") {
+    if (winLoseDraw === "win") {
+      return getValue("scissors") + 6;
+    } else {
+      return getValue("rock");
+    }
+  } else if (opponent === "scissors") {
+    if (winLoseDraw === "win") {
+      return getValue("rock") + 6;
+    } else {
+      return getValue("paper");
+    }
+  }
+};
+
+let part2score = 0;
+
+splitInput.forEach((game) => {
+  const opponent = parseString(game.charAt(0));
+  const winLoseDraw = calcWinLoseDraw(game.charAt(2));
+  part2score += parseSecondGame(opponent, winLoseDraw);
+});
+
+console.log("Part 2 Solution: " + part2score);
