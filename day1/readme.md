@@ -8,21 +8,21 @@ The Elves take turns writing down the number of Calories contained by the variou
 
 Input:
 
-----input.txt
-1000
-2000
+----input.txt\
+1000\
+2000\
 3000
 
 4000
 
-5000
+5000\
 6000
 
-7000
-8000
+7000\
+8000\
 9000
 
-10000
+10000\
 ----END input
 
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
