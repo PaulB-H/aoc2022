@@ -21,13 +21,13 @@ The second column, you reason, must be what you should play in response: X for R
 
 Example Input:
 
-----input.txt
-B Z
-A X
-C X
-C X
-C Z
-C X
+----input.txt\
+B Z\
+A X\
+C X\
+C X\
+C Z\
+C X\
 ----END input
 
 Calculate the score you would get if you were to follow the strategy guide.
